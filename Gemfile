@@ -18,8 +18,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'annotate'
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -53,6 +51,7 @@ group :development, :test do
 # sets rails console to open in pry instead of irb
 # https://github.com/rweng/pry-rails
   gem 'pry-rails'
+  gem 'rails-erd'
 # command line tool. run `$ annotate`. annotates models with schema data
 # https://github.com/ctran/annotate_models
   gem 'annotate'
