@@ -22,7 +22,6 @@ class FestivalsController < ApplicationController
     @festival = Festival.find(params[:id])
   end
 
-
 	def destroy
 	end
 

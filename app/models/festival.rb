@@ -25,9 +25,7 @@ class Festival < ActiveRecord::Base
 # either copy and paste from URL ex. Lollapalooza: 4a7c4f0df964a52034ec1fe3
 # or search foursquare by venue name
 
-
-
-
+#  client.venue_tips("4b2afcaaf964a5205bb324e3"
 
 end
 
