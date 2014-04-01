@@ -19,7 +19,8 @@ class FestivalsController < ApplicationController
     end
 
   def show
-    @festival = Festival.find_by(id: params[:id])
+    @festival = Festival.find(params[:id])
+  end
 
 
 	def destroy
