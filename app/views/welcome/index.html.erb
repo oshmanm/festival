@@ -1,0 +1,27 @@
+<h1>Music Festival Tracker</h1><br>
+
+<% if logged_in? %>
+
+  <p>Hi, <%= current_user.name %>!</p>
+  <p>
+    <a href="/logout"> Logout</a>
+  </p>
+
+  <% if current_user.festivals.empty? %>
+    <p>You haven't registered for any festivals yet.</p>
+  <% else %>
+    <h2>Festivals attending</h2>
+    <ul>
+      <% current_user.festivals.each do |festival| %>
+        <li>"<%= festival.name %>"</li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<% else %><p>
+    <a href="/users/new">Sign Up</a>
+  </p>
+  <p><br>
+    <a href="/session/new">Login</a>
+  </p>
+ <% end %>
