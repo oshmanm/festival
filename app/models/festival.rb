@@ -15,4 +15,19 @@ class Festival < ActiveRecord::Base
 	has_many :users
 	has_many :invites, :through => :users
 	validates :name, :presence => true
+
+
+
+# search for foursquare tips about a festival
+# https://api.foursquare.com/v2/venues/VENUE_ID/tips
+
+# how do we get the venue id?
+# either copy and paste from URL ex. Lollapalooza: 4a7c4f0df964a52034ec1fe3
+# or search foursquare by venue name
+
+
+
+
+
 end
+
