@@ -11,34 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401150907) do
+ActiveRecord::Schema.define(version: 20140401155643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "festivals", force: true do |t|
-    t.string "name"
-    t.string "location"
-    t.string "date"
-    t.string "description"
-    t.string "users_attending"
+    t.string   "name"
+    t.string   "location"
+    t.string   "date"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "invites", force: true do |t|
-    t.string  "invitor"
-    t.string  "invitee"
-    t.integer "festival_id"
+    t.integer  "invitor_id"
+    t.integer  "invitee_id"
+    t.integer  "festival_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "invites", ["festival_id"], name: "index_invites_on_festival_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string  "name"
-    t.string  "email"
-    t.string  "password_digest"
-    t.integer "age"
-    t.string  "location"
-    t.integer "festival_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "age"
+    t.string   "location"
+    t.integer  "festival_id"
   end
 
 end

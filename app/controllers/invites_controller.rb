@@ -14,6 +14,7 @@ class InvitesController < ApplicationController
 
 	def show
     @invite = Invite.find_by(id: params[:id])
+  end
 
 	def destroy
 	end

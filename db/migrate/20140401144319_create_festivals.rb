@@ -6,6 +6,7 @@ class CreateFestivals < ActiveRecord::Migration
       t.string  :date
       t.string 	:description
       t.string 	:users_attending
+      t.timestamps
     end
   end
 end
