@@ -1,0 +1,10 @@
+<h1>registered attendees</h1>
+
+<ul>
+<% @users.each do |user| %>
+  <li>
+    <strong><%= user.name %></strong>
+  </li>
+
+<% end %>
+</ul>
