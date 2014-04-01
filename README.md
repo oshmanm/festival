@@ -1,3 +1,5 @@
 # Musical Festival Project
 
-To be expanded upon
+https://www.pivotaltracker.com/s/projects/1047480#
+
+[!image]("/erd.pdf")
