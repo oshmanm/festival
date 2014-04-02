@@ -9,6 +9,7 @@
 #  description :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  venue_id    :integer
 #
 
 class Festival < ActiveRecord::Base
@@ -26,6 +27,13 @@ class Festival < ActiveRecord::Base
 # or search foursquare by venue name
 
 #  client.venue_tips("4b2afcaaf964a5205bb324e3"
+	def tips
+	 	base_url = "https://api.foursquare.com/v2/venues/#{venue_id}/tips?sort=popular&oauth_token=333XGVNQCUY0LI4GGL4B4MXWAM022G1EKD0JZWXOLKESCFK3&v=20140401"
+		response = HTTParty.get(base_url)
+		response["response"]["tips"]["items"].map do |item|
+			item['text']
+		end
+	end
 
 end
 

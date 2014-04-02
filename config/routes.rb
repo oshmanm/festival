@@ -14,6 +14,7 @@ FestivalApp::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
      resources :users
      resources :festivals
+     resources :invites
 
   get  "/session/new"  => "session#new"
   post "/session"      => "session#create"

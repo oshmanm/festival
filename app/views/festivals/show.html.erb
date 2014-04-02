@@ -1,9 +1,7 @@
-<p>Hi, <%= current_user.name %>. Here are the tips for <%= festival.name %><p>
+<p>Hi, <%= current_user.name %>. Here are the tips for <%= @festival.name %><p>
 
 <ul>
   <li>
-    <%= tips %>
+    <%= @festival.tips %>
   </li>
 </ul>
-
-<% end %>

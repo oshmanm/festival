@@ -5,7 +5,7 @@ class InvitesController < ApplicationController
 	end
 
 	def new
-		@invite = Invite.new
+		@invites = Invite.new
 	end
 
 	def create

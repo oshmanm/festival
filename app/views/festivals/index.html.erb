@@ -1,13 +1,14 @@
 <%= link_to "Home", root_path %>
 
 <p>Hi, <%= current_user.name %>. Here's a list of some cool festivals.</p>
-
+<br>
 <ul>
-<% @festivals.each do |user| %>
+<% @festivals.each do |festival| %>
   <li>
-    <%= link_to(festival.name, festival_path(festival) %>
+    <%= link_to festival.name, festival_path(festival) %>
   </li>
   <% end %>
+  <br>
   <li>
-  	<a href="/users"><%= "Friends"></a></li>
+  	<a href="/users"><%= "Users"%></a></li>
 </ul>
