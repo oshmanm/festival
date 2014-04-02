@@ -4,8 +4,12 @@
 
   <p>Hi, <%= current_user.name %>!</p>
   <p>
+  <a href="/festivals"> Festivals</a>
+    <a href="/invites/new"> Invite friend</a>
+    <a href="/invites">View invites</a>
     <a href="/logout"> Logout</a>
   </p>
+
 
   <% if current_user.festivals.empty? %>
     <p>You haven't registered for any festivals yet.</p>

@@ -22,3 +22,9 @@
 	voodoo = Festival.create({name: "Voodoo"})
 	jazz_fest = Festival.create({name: "Jazz Fest"})
 	hangout = Festival.create({name: "Hangout Music Fest"})
+
+
+	user_admin = User.create({email: "test@test.com", name: "admin", password: "password",
+                          password_confirmation: "password", is_admin: true})
+
+	user_mike = User.create([{ name: 'Michael Oshman', email: 'michael.oshman@gmail.com', password: "password", password_confirmation: "password"}])
